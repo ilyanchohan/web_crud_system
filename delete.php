@@ -7,6 +7,7 @@ if ($id) {
     $conn->query("SET @count = 0");
     $conn->query("UPDATE users SET id = @count:=@count+1");
     $conn->query("ALTER TABLE users AUTO_INCREMENT = 1");
+    
 }
 header("Location: VIEW.php?msg=deleted");
 exit;
